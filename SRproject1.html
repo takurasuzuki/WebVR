@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Object and Environment</title>
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  
+</head>
+<body>
+
+<a-scene>
+  <a-assets>
+        <img id="360inside-gate" src="40664434263_e24f88ebf0_k.jpg">
+        <img id="ground-inside-gate" src="portuguese_stone_pavement_2715.jpg">
+        <img id="dots" src="home 2.jpg">
+        <img id="shrine" src="shrine.jpg">
+        <img id="times-square" src="timessquare.jpg">
+        <img id="concrete-tile" src="concretetile2.jpg">
+        <img id="McDonals" src="McDonals.jpg">
+        <img id="m&m" src="m&m.jpg">
+        <img id="musicals" src="musicals.jpg">
+        <img id="disney" src="disney21.jpg">
+  </a-assets>
+    
+    <a-entity environment="lightPosition: 1 5 -2; groundColor: gray"
+    ></a-entity>
+    
+    <a-entity id="ourside-gate" shadow="receive: true">
+             ></a-sky>
+      <a-box src="#times-square" 
+             scale="5 30 5" 
+             position="0 15 12"
+             ></a-box>
+      <a-plane material="src: #concrete-tile;
+                         repeat: 500 500;
+                         color: #FFFFFF"
+               rotation="-90 0 0"
+               position="0 0.1 0"
+               scale="1000 1000 1"
+               ></a-plane>
+      <a-plane color="#822424"
+               rotation="-90 0 0"
+               scale="4.5 60 1"
+               position="0 0.2 0"
+               ></a-plane>
+      <a-curvedimage src="#disney"
+             theta-length="85"
+             theta-start="35"
+             radius="19"
+             position="0 7 0"
+             height="15"
+             ></a-curvedimage>
+      <a-curvedimage src="#musicals"
+             theta-length="110"
+             theta-start="65"
+             radius="17"
+             position="0 7 -15"
+             height="15"
+             ></a-curvedimage>       
+      <a-curvedimage src="timessquare-10.jpg"
+             theta-length="67"
+             theta-start="45"
+             radius="17"
+             position="2.5 30 0"
+             height="40"
+             ></a-curvedimage>
+      <a-curvedimage src="timessquare-2.jpg"
+             theta-length="80"
+             theta-start="250"
+             radius="17"
+             position="0 12 0"
+             height="30"
+             ></a-curvedimage>
+      <a-curvedimage src="timessquare-12.jpg"
+             theta-length="65"
+             theta-start="330"
+             radius="17"
+             position="0 16 0"
+             height="33"
+             ></a-curvedimage>
+      <a-curvedimage src="timessquare-5.jpg"
+             theta-length="90"
+             theta-start="199"
+             radius="18"
+             position="0 16 -12"
+             height="33"
+             ></a-curvedimage>
+    </a-entity>
+ 
+    <a-entity id="inside-gate" shadow="receive: true" animation="property: position; to: 0 0 5.8; from: 0 0 -5; dur: 50000">
+
+      <a-cylinder color="red" position="2 0 -3" scale="0.4 7 0.4" radius="0.2"></a-cylinder>
+      <a-cylinder color="red" position="-2 0 -3" scale="0.4 7 0.4" radius="0.2"></a-cylinder>
+      <a-cylinder color="red" position="0 3.5 -3" scale="0.5 5 0.5" radius="0.2" rotation="0 0 90"></a-cylinder>
+      <a-cylinder color="red" position="0 3 -3" scale="0.4 4 0.4" radius="0.2" rotation="0 0 90"></a-cylinder>
+      <a-cylinder color="red" position="0 3.25 -3" scale="0.5 0.5 0.5" radius="0.2" rotation="0 0 0"></a-cylinder>
+      
+      
+      <a-curvedimage src="#shrine"
+               theta-length="110"
+               theta-start="125"
+               radius="15"
+               position="0 5 -2"
+               height="10"
+               animation="property: opacity; from: 0; to: 1; dur: 50000"
+               ></a-curvedimage>
+      <a-sky   src="#360inside-gate"
+               radius="20"
+               side="double"
+               position="0 0 -23"
+               animation="property: opacity; from: 0; to: 1; dur: 50000"
+               ></a-sky>
+      <a-circle src="#ground-inside-gate"
+               rotation="-90 0 0"
+               radius="17"
+               position="0 0.15 -20"
+               repeat=" 5 5"
+               animation="property: opacity; from: 0; to: 1; dur: 50000"
+               ></a-circle>
+               
+    </a-entity>
+
+     
+      <a-light color="white" 
+               position="5.249 3.66711 -1.15862" 
+               light="color: #fffdf8; type: ambient; castShadow: true; decay: -1.52; intensity: 0.28"
+               ></a-light>
+    
+     <a-camera>
+       <a-cursor></a-cursor>
+     </a-camera>
+
+    <a-entity camera look-controls>
+            <a-entity cursor="fuse: true; fuseTimeout: 500"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat"></a-entity>
+    </a-entity>
+
+
+</a-scene>
+
+</body>
+</html>
