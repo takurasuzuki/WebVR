@@ -89,7 +89,7 @@
              ></a-curvedimage>
     </a-entity>
  
-    <a-entity id="inside-gate" shadow="receive: true" animation="property: position; to: 0 0 5.8; from: 0 0 -5; dur: 50000">
+    <a-entity id="inside-gate" shadow="receive: true" animation="property: position; to: 0 0 5.8; from: 0 0 -5; dur: 50000; dir: alternate; loop: true">
 
       <a-cylinder color="red" position="2 0 -3" scale="0.4 7 0.4" radius="0.2"></a-cylinder>
       <a-cylinder color="red" position="-2 0 -3" scale="0.4 7 0.4" radius="0.2"></a-cylinder>
@@ -104,20 +104,20 @@
                radius="15"
                position="0 5 -2"
                height="10"
-               animation="property: opacity; from: 0; to: 1; dur: 50000"
+               animation="property: opacity; from: 0; to: 1; dur: 50000; dir: alternate; loop: true"
                ></a-curvedimage>
       <a-sky   src="#360inside-gate"
                radius="20"
                side="double"
                position="0 0 -23"
-               animation="property: opacity; from: 0; to: 1; dur: 50000"
+               animation="property: opacity; from: 0; to: 1; dur: 50000; dir: alternate; loop: true"
                ></a-sky>
       <a-circle src="#ground-inside-gate"
                rotation="-90 0 0"
                radius="17"
                position="0 0.15 -20"
                repeat=" 5 5"
-               animation="property: opacity; from: 0; to: 1; dur: 50000"
+               animation="property: opacity; from: 0; to: 1; dur: 50000; dir: alternate; loop: true"
                ></a-circle>
                
     </a-entity>
